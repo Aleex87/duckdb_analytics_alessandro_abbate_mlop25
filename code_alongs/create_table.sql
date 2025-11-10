@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS funny_joks(
+id INTEGER PRIMARY KEY,
+joke_text VARCHAR,
+reating INTEGER
+);
