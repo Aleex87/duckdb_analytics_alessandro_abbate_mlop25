@@ -1,6 +1,6 @@
 -- if not exist -> make this code idempotent
 CREATE TABLE
-    IF NOT EXISTS data_lobs AS (
+    IF NOT EXISTS data_jobs AS (
         SELECT
             *
         FROM
