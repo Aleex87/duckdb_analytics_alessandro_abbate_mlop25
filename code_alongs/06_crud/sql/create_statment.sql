@@ -1,0 +1,41 @@
+CREATE SCHEMA IF NOT EXISTS database_schema;
+
+CREATE SCHEMA IF NOT EXISTS programming_schema;
+
+-- check if esxist the schema
+FROM
+    information_schema.schemata;
+
+-- check if esxist the schema
+SELECT
+    *
+FROM
+    information_schema.schemata
+WHERE
+    catalog_name = 'glossary';
+
+-- autoincrement sequence
+CREATE SEQUENCE IF NOT EXISTS id_sql_sequence START 1;
+
+CREATE SEQUENCE IF NOT EXISTS id_duckdb_sequence START 1;
+
+FROM
+    pg_catalog.pg_sequences;
+
+-- create a table 
+CREATE TABLE
+    IF NOT EXISTS database_schema.sql_table (
+        id INTEGER DEFAULT nextval ('id_sql_sequence'),
+        word STRING,
+        description STRING
+    );
+
+-- create a table 
+CREATE TABLE
+    IF NOT EXISTS database_schema.duckdb_table (
+        id INTEGER DEFAULT nextval ('id_duckdb_sequence'),
+        word STRING,
+        description STRING
+    );
+
+    
