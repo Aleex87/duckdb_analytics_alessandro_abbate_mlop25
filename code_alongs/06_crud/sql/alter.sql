@@ -6,7 +6,7 @@
 ALTER TABLE database_schema.duckdb_table
 ADD COLUMN learnt BOOLEAN DEFAULT FALSE;
 
--- it will desapir the fike . wal
+-- it will desapir the fike . wall
 -- then we can .quit from the duckdb data/glossary.duckdb
 
 -- BASICLLY RUN FROMM THE TERMINALE 
