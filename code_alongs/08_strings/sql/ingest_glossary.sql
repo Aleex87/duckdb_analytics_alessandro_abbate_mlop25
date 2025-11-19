@@ -11,6 +11,7 @@ SELECT
 FROM
     read_csv_auto ('data/sql_terms.csv');
 
-
+-- check if it work everything 
+from staging.glossary;
 
 
