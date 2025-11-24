@@ -38,4 +38,24 @@ FROM
     plants p
     INNER JOIN plant_care pc ON p.plant_id = pc.plant_id;
 
-    
+-- full join 
+SELECT
+    p.plant_id,
+    p.plant_name,
+    p.type,
+    pc.water_schedule,
+    pc.sunlight
+FROM
+    plants p
+    FULL JOIN plant_care pc ON p.plant_id = pc.plant_id;
+-- 
+
+
+
+
+
+
+
+
+
+
