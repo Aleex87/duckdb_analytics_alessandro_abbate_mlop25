@@ -48,7 +48,23 @@ FROM
 -- clean the spaces inside the sentences
 SELECT
     description,
+    REPLACE (TRIM(description), '   ', '  ') AS cleaned_description,
     REPLACE (TRIM(description), '  ', ' ') AS cleaned_description
 FROM
     staging.glossary;
-    
+
+-- using regexp_ replacment
+SELECT
+    description,
+    REPLACE (TRIM(description), '   ', '  ') AS cleaned_description,
+    REPLACE (TRIM(description), '  ', ' ') AS cleaned_description_replace,
+    REGEXP_REPLACE(TRIM(description), ' +', ' ', 'g') AS regexp_clean
+FROM
+    staging.glossary;
+
+-- palindrom
+
+SELECT 'hej på dig' AS s1,
+REVERSE (s1),
+'ni talar bra latin' AS p1,
+REVERSE (p1);
